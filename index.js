@@ -26,8 +26,8 @@ module.exports = function() {
 			var file64 = new Buffer(file.contents).toString('base64');
 			var mtype =  mime.lookup(file.path);
 			var fileext = path.extname(file.path); 
-			var filename = path.basename(file.path, fileext);
-			var csswrapper = '@font-face {font-family: '+filename+'; src: url(data:'+mtype+';base64,'+file64+');}';
+			var filename = path.basename(file.path.replace('+', ' '), fileext);
+			var csswrapper = '@font-face {font-family: "'+filename+'"; src: url(data:'+mtype+';base64,'+file64+');}';
 			var output = csswrapper;
 			
 			file.contents = new Buffer(output);
