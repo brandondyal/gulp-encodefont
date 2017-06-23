@@ -25,14 +25,14 @@ module.exports = function() {
 		if (file.isBuffer()) {
 			var file64 = new Buffer(file.contents).toString('base64');
 			var mtype =  mime.lookup(file.path);
-			var fileext = path.extname(file.path); 
-			var filename = path.basename(file.path.replace('+', ' '), fileext);
+			var fileext = path.extname(file.path);
+			var filename = path.basename(file.path.replace(/\+/g, ' '), fileext);
 			var csswrapper = '@font-face {font-family: "'+filename+'"; src: url(data:'+mtype+';base64,'+file64+');}';
 			var output = csswrapper;
-			
+
 			file.contents = new Buffer(output);
 			file.path = gutil.replaceExtension(file.path, '.css');
 			return callback(null, file);
 		}
 	});
-}; 
+};

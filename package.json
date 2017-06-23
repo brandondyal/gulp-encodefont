@@ -1,5 +1,5 @@
 {
-  "name": "gulp-injectfont",
+  "name": "gulp-encodefont",
   "version": "0.0.1",
   "description": "Encode base64 data from font-files and store the result in a css file.",
   "main": "index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ddalcu/gulp-injectfont"
+    "url": "https://github.com/brandondyal/gulp-encodefont"
   },
   "keywords": [
-    "gulpplugin", "encode", "base64", "font", "css", "ttf"
+    "gulpplugin", "encode", "base64", "font", "css", "ttf", "woff"
   ],
   "author": {
-    "name": "ddalcu",
-    "url": "https://github.com/ddalcu"
+    "name": "brandondyal",
+    "url": "https://github.com/brandondyal"
   },
   "license": "MIT",
   "dependencies": {
@@ -32,9 +32,9 @@
   },
   "readmeFilename": "README.md",
   "bugs": {
-    "url": "https://github.com/ddalcu/gulp-injectfont/issues"
+    "url": "https://github.com/brandondyal/gulp-encodefont/issues"
   },
-  "homepage": "https://github.com/ddalcu/gulp-injectfont",
-  "_id": "gulp-injectfont@0.0.1",
+  "homepage": "https://github.com/brandondyal/gulp-encodefont",
+  "_id": "gulp-encodefont@0.0.1",
   "_from": "gulp-cssfont64@"
 }
